@@ -1,0 +1,7 @@
+crewai
+crewai_tools
+load_dotenv
+pymongo
+fastapi
+openai
+uvicorn
