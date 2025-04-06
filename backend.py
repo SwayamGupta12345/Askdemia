@@ -100,9 +100,10 @@ class ChatHistoryResponse(BaseModel):
     user_id: str
     messages: List[dict]
 
-@app.get("/ping")
+@app.api_route("/ping", methods=["GET", "HEAD"])
 def ping():
     return {"status": "alive"}
+
 
 @app.get("/")
 async def root():
