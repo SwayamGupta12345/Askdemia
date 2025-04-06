@@ -100,6 +100,10 @@ class ChatHistoryResponse(BaseModel):
     user_id: str
     messages: List[dict]
 
+@app.get("/")
+async def root():
+    return {"status": "Backend is active"}
+
 @app.delete("/chat/history/{user_id}")
 async def delete_chat_history(user_id: str):
     try:
