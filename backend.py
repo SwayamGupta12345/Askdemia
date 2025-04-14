@@ -19,7 +19,12 @@ if not api_key:
     raise ValueError("Error: GEMINI_API_KEY is missing from the .env file.")
 
 # Initialize FastAPI app
-app = FastAPI()
+# Initialize FastAPI app
+app = FastAPI(
+    docs_url=None,        # disables Swagger UI at /docs
+    redoc_url=None,       # disables ReDoc at /redoc
+    openapi_url=None      # disables OpenAPI JSON at /openapi.json
+)
 
 # Enable CORS for frontend connection
 app.add_middleware(
