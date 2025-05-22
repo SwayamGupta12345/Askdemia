@@ -41,7 +41,7 @@ db = client["chatbot"]
 messages_collection = db["message"]
 
 # Initialize LLM with Gemini
-llm = LLM(model="gemini/gemini-1.5-pro", api_key=api_key, verbose=True)
+llm = LLM(model="gemini/gemini-1.5-flash", api_key=api_key, verbose=True)
 # Define AI Agents with improved backstories
 
 chatbot_agent = Agent(
